@@ -1,0 +1,43 @@
+Nmap Scripting Engine — NSE
+
+Os scripts ficam instalados normalmente em:
+
+/usr/share/nmap/scripts/
+
+----------
+
+se quiser pesquisar algo especifico, pode executar o comando:
+
+ls /usr/share/nmap/scripts/ | grep '^http'
+
+onde filtra o termo http
+
+------
+nmap --script=default 192.168.1.42
+
+Esses scripts fazem várias verificações comuns, como:
+
+descobrir informações sobre serviços;
+verificar configurações comuns;
+coletar algumas informações do alvo;
+detectar certos problemas conhecidos.
+
+Existe a forma mais curta desse script que é:
+
+nmap -sC 192.168.1.10
+
+-----------
+Essa combinação é extremamente útil:
+
+nmap -sV -sC 192.168.56.101
+
+Você está fazendo:
+
+descobrir serviço
+       +
+descobrir versão
+       +
+interagir com scripts NSE
+
+
+
